@@ -140,6 +140,10 @@ I own an LenovoEMC² PX4-400R NAS that I got from ebay. Sadly during resetting t
 
 ❗[PX4-300D Lenovo EMC NAS Device Stuck at 95%](https://www.petenetlive.com/KB/Article/0001381)
 
+❗[General overview support page](https://download.lenovo.com/lenovoemc/na/en/index.html)
+
+❗[Official LenovoEMC, Lenovo, and Iomega network storage support](https://download.lenovo.com/lenovoemc/na/en/app/answers/detail/a_id/14412.html)
+
 [Help for old Lenovo EMC NAS units, IX2, PX4 etc](https://forums.anandtech.com/threads/help-for-old-lenovo-emc-nas-units-ix2-px4-etc.2609187/)
 
 ## Contributing
