@@ -26,7 +26,7 @@ The Lenovo LifeLine Imager is a tool that can create a bootable USB drive that c
 
 #### How to download the Lenovo LifeLine Imager?
 
-Thanks to a comment under [this post](https://www.petenetlive.com/KB/Article/0001381), here is a guide on how to "consruct" the download link for the Lenovo LifeLine Imager, specific to your device.
+Thanks to a comment under [this post](https://www.petenetlive.com/KB/Article/0001381), here is a guide on how to "construct" the download link for the Lenovo LifeLine Imager, specific to your device.
 
 1. Go to the [LenovoEMC² Support Page](https://download.lenovo.com/lenovoemc/na/en/index.html).
 2. Find your device in the list and open the support page for it.
@@ -79,7 +79,7 @@ Feel free to add your device and firmware version to the table below using a PR.
 1. Format a USB drive to FAT32.
 2. Unzip the downloaded Imager file and run the executable file contained within.
 3. When prompted, select the USB drive as the destination.
-4. Reboot the NAS with the USB drive inserted **and** hold the reset button for 60 seconds.
+4. Reboot the NAS with the USB drive inserted (in the **top left** port on the backside of the device) **and** hold the reset button for 60 seconds.
 5. You should now see this screen:
 
 <div align="center">
@@ -91,6 +91,11 @@ Feel free to add your device and firmware version to the table below using a PR.
 6. When finished, the device should shut down, simply power it back on.
 7. The device should now boot back up and be ready to be reconfigured.
 
+## Additional Information
+
+- The Lenovo LifeLine Imager is a Windows-only tool.
+- The used USB needs to be formatted as FAT32! Otherwise, the NAS won't recognize it.
+
 ## Background Information
 
 I own an LenovoEMC² PX4-400R NAS that I got from ebay. Sadly during resetting the device, I bricked it. I was **not** able to recover it yet. But after lots of research, I found some forum posts that might help you recover your device, if you ever find yourself in a similar situation. I decided to create this repository to help others in the future.
@@ -100,3 +105,7 @@ I own an LenovoEMC² PX4-400R NAS that I got from ebay. Sadly during resetting t
 ❗[PX4-300D Lenovo EMC NAS Device Stuck at 95%](https://www.petenetlive.com/KB/Article/0001381)
 
 [Help for old Lenovo EMC NAS units, IX2, PX4 etc](https://forums.anandtech.com/threads/help-for-old-lenovo-emc-nas-units-ix2-px4-etc.2609187/)
+
+## Contributing
+
+Pull requests are welcome. I welcome any contributions to this repository. If you have any questions, feel free to open an issue.
