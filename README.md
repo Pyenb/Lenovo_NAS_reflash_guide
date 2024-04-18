@@ -4,6 +4,8 @@
 
 This repository contains information about Lenovo NAS devices. Specifically, information on how to reflash the firmware on these devices.
 
+<img src="images/banner.png" width="900">
+
 </div>
 
 ## Table of Contents
@@ -44,13 +46,15 @@ Thanks to a comment under [this post](https://www.petenetlive.com/KB/Article/000
 
 </div>
 
-#### Table of known Lenovo LifeLine Imager downloads
+### Table of known Lenovo LifeLine Imager downloads
 
 Feel free to add your device and firmware version to the table below using a PR.
 
-##### LenovoEMC
+<div align="center">
 
-| Device | Firmware Version | Download Link | Notes | Version |
+#### LenovoEMC
+
+| Device | Firmware Version | Download Link | Note | Version |
 | ------ | ---------------- | ------------- | ----- | ------- |
 | PX4-400R | 4.1.414.34909 | [Download](https://download.lenovo.com/nasupdate/asgimage/b4b-4.1.414.34909.zip) | Same for PX4-400D | Rack |
 | PX4-300R | 4.1.414.34909 | [Download](https://download.lenovo.com/nasupdate/asgimage/px4-300r-4.1.414.34909.zip) | | Rack |
@@ -58,25 +62,27 @@ Feel free to add your device and firmware version to the table below using a PR.
 | PX4-300D | 4.1.414.34909 | [Download](https://download.lenovo.com/nasupdate/asgimage/px4px6-4.1.414.34909.zip) | Same for PX6-300D | Desktop |
 | PX2-300D | 4.1.414.34909 | [Download](https://download.lenovo.com/nasupdate/asgimage/b2a-4.1.414.34909.zip) | | Desktop |
 
-##### Lenovo
+#### Lenovo
 
-| Device | Firmware Version | Download Link | Notes | Version |
+| Device | Firmware Version | Download Link | Note | Version |
 | ------ | ---------------- | ------------- | ----- | ------- |
 | IX4-300D | 4.1.414.34909 | [Download](https://download.lenovo.com/nasupdate/asgimage/h4c-4.1.414.34909.zip) |  | Desktop |
 | IX2 | 4.1.408.34845 | [Download](https://download.lenovo.com/nasupdate/asgimage/ix2-ng-4.1.408.34845.zip) | Same for IX2-DL | Desktop |
 
-##### Iomega (StorCenter)
+#### Iomega (StorCenter)
 
-| Device | Firmware Version | Download Link | Notes | Version |
+| Device | Firmware Version | Download Link | Note | Version |
 | ------ | ---------------- | ------------- | ----- | ------- |
 | ALL | 4.1.414.34909 | | The download links for the StorCenter devices are the same as for the LenovoEMC² devices | Both |
 
+</div>
+
 ## How to flash the firmware
 
-> [!WARNING]
+> [!CAUTION]
 > Remove your hard drives before flashing the firmware to prevent data loss! During the flashing process, all connected hard drives will be formatted!
 
-1. Format a USB drive to FAT32.
+1. Format a USB drive to FAT32. (Needs to be at least 1GB in size, maximum 32GB)
 2. Unzip the downloaded Imager file and run the executable file contained within.
 3. When prompted, select the USB drive as the destination.
 4. Reboot the NAS with the USB drive inserted (in the **top left** port on the backside of the device) **and** hold the reset button for 60 seconds.
@@ -95,6 +101,7 @@ Feel free to add your device and firmware version to the table below using a PR.
 
 - The Lenovo LifeLine Imager is a Windows-only tool.
 - The used USB needs to be formatted as FAT32! Otherwise, the NAS won't recognize it.
+- Sometimes the USB creator tool doesn't properly move the firmware files to the USB. If you encounter issues, try rerunning the tool. I am currently looking for a way to manually create the USB drive.
 
 ## Background Information
 
@@ -108,4 +115,4 @@ I own an LenovoEMC² PX4-400R NAS that I got from ebay. Sadly during resetting t
 
 ## Contributing
 
-Pull requests are welcome. I welcome any contributions to this repository. If you have any questions, feel free to open an issue.
+I welcome any contributions to this repository. If you have any questions, feel free to open an issue.
