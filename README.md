@@ -18,7 +18,12 @@ This repository contains information about Lenovo NAS devices. Specifically, inf
     - [Lenovo](#lenovo)
     - [Iomega (StorCenter)](#iomega-storcenter)
 - [How to flash the firmware](#how-to-flash-the-firmware)
+- [Additional Information](#additional-information)
+  - [USB file structure](#usb-file-structure)
+- [Background Information](#background-information)
 - [Resources](#resources)
+- [Contributing](#contributing)
+- [Disclaimer](#disclaimer)
 
 ## Lenovo LifeLine Imager download
 
@@ -30,7 +35,7 @@ The Lenovo LifeLine Imager is a tool that can create a bootable USB drive that c
 
 Thanks to a comment under [this post](https://www.petenetlive.com/KB/Article/0001381), here is a guide on how to "construct" the download link for the Lenovo LifeLine Imager, specific to your device.
 
-1. Go to the [LenovoEMC² Support Page](https://download.lenovo.com/lenovoemc/na/en/index.html).
+1. Go to the [Support page for LenovoEMC Network Storage, Lenovo Network Storage, and Iomega products](https://download.lenovo.com/lenovoemc/na/en/index.html).
 2. Find your device in the list and open the support page for it.
 3. Under `DOWNLOADS AND UPDATES` click on `Firmware Version x.x.x.x for XXXX`.
 4. Scroll down to `Update Instructions -> Firmware Update Procedure` and take note of the first step of the instructions.
