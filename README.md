@@ -109,7 +109,7 @@ Feel free to add your device and firmware version to the table below using a PR.
 > [!NOTE]
 > The file under `b4b_images` is the actual firmware file. The other files are used for the boot process. This file could be manually replaced, in case the Imager tool doesn't create the USB drive properly.
 
-The USB drive should have the following structure:
+The USB drive should have the following structure after running the Imager tool:
 
 ```plaintext
 USB-DRIVE:.
@@ -139,4 +139,15 @@ I own an LenovoEMC² PX4-400R NAS that I got from ebay. Sadly during resetting t
 
 ## Contributing
 
-I welcome any contributions to this repository. If you have any questions, feel free to open an issue.
+Contributions to this repository are very welcome! Here's how you can help:
+
+1. **Fork** this repository.
+2. **Create a new branch** on your forked repository.
+3. **Make your changes**. This could be adding a new device to the table, updating a download link, or improving the instructions.
+4. **Submit a pull request**. Make sure to describe your changes in detail.
+
+If you have any questions or need help, feel free to open an issue.
+
+## Disclaimer
+
+Flashing firmware is a potentially risky operation. If done incorrectly, it can result in a bricked device. Please follow the instructions carefully and understand the risks involved. The author of this repository is not responsible for any damage caused by following these instructions.
