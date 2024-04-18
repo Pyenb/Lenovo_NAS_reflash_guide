@@ -1,6 +1,6 @@
 <div align="center">
 
-# Lenovo NAS Reflash
+# Lenovo NAS reflash
 
 This repository contains information about Lenovo NAS devices. Specifically, information on how to reflash the firmware on these devices.
 
@@ -38,7 +38,7 @@ Thanks to a comment under [this post](https://www.petenetlive.com/KB/Article/000
 6. Take note of the filename of the `.tgz` file. (But without the `.tgz` extension!!!)
 7. Construct the download link as follows: `https://download.lenovo.com/nasupdate/asgimage/ + filename + .zip` and open it in your browser.
 8. You should now be able to download the Lenovo LifeLine Imager, specific to your device and firmware version.
-(9.) The downloaded content should look like this, after extracting the `.zip` file:
+9. The downloaded content should look like this, after extracting the `.zip` file:
 
 <div align="center">
 
@@ -101,13 +101,37 @@ Feel free to add your device and firmware version to the table below using a PR.
 
 - The Lenovo LifeLine Imager is a Windows-only tool.
 - The used USB needs to be formatted as FAT32! Otherwise, the NAS won't recognize it.
-- Sometimes the USB creator tool doesn't properly move the firmware files to the USB. If you encounter issues, try rerunning the tool. I am currently looking for a way to manually create the USB drive.
+- If the Imager tool doesn't recognize the USB drive, try using rufus to reformat the USB drive. Select the drive, then the `Non-bootable` option, and select `FAT32` as the file system. Then click `Start`.
+- Sometimes the USB creator tool doesn't properly move the firmware files to the USB. If you encounter issues, try rerunning the tool or manually moving the files to the USB by following the USB file structure below.
+
+### USB file structure
+
+> [!NOTE]
+> The file under `b4b_images` is the actual firmware file. The other files are used for the boot process. This file could be manually replaced, in case the Imager tool doesn't create the USB drive properly.
+
+The USB drive should have the following structure:
+
+```plaintext
+USB-DRIVE:.
+├───boot
+│   └───grub
+│       ├───locale
+|       └───...
+├───images
+│   └───...
+└───emctools
+    └───b4b_images
+        └───VERSION_Imager.tgz
+```
 
 ## Background Information
 
 I own an LenovoEMC² PX4-400R NAS that I got from ebay. Sadly during resetting the device, I bricked it. I was **not** able to recover it yet. But after lots of research, I found some forum posts that might help you recover your device, if you ever find yourself in a similar situation. I decided to create this repository to help others in the future.
 
 ## Resources
+
+> [!NOTE]
+> Links marked with ❗ are the most important ones.
 
 ❗[PX4-300D Lenovo EMC NAS Device Stuck at 95%](https://www.petenetlive.com/KB/Article/0001381)
 
