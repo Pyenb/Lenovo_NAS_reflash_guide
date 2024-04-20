@@ -106,13 +106,13 @@ Feel free to add your device and firmware version to the table below using a PR.
 
 - The Lenovo LifeLine Imager is a Windows-only tool.
 - The used USB needs to be formatted as FAT32! Otherwise, the NAS won't recognize it.
-- If the Imager tool doesn't recognize the USB drive, try using rufus to reformat the USB drive. Select the drive, then the `Non-bootable` option, and select `FAT32` as the file system. Then click `Start`.
-- Sometimes the USB creator tool doesn't properly move the firmware files to the USB. If you encounter issues, try rerunning the tool or manually moving the files to the USB by following the USB file structure below.
+- I had to try multiple USB drives until I found one that worked. The NAS recognized all of them and went into the recovery process, but still wouldn't boot after.
+- If the Imager tool doesn't recognize the USB drive, try using rufus to reformat the USB drive. Select the drive, then the `Non-bootable` option, select `FAT32` as the file system and `MBR` as the partition scheme. Then press `Start`.
 
 ### USB file structure
 
 > [!NOTE]
-> The file under `b4b_images` is the actual firmware file. The other files are used for the boot process. This file could be manually replaced, in case the Imager tool doesn't create the USB drive properly.
+> The file under `b4b_images` is the actual firmware file. The other files are used for the boot process. If this file is missing, please try rerunning the Imager tool.
 
 The USB drive should have the following structure after running the Imager tool:
 
@@ -131,7 +131,7 @@ USB-DRIVE:.
 
 ## Background Information
 
-I own an LenovoEMC² PX4-400R NAS that I got from ebay. Sadly during resetting the device, I bricked it. I was **not** able to recover it yet. But after lots of research, I found some forum posts that might help you recover your device, if you ever find yourself in a similar situation. I decided to create this repository to help others in the future.
+I own a LenovoEMC² PX4-400R NAS, which I purchased from eBay. Unfortunately, I bricked the device during the reset process. Fortunately, I was able to recover it using information I found online. After conducting some research, I found posts that could potentially assist **you** in recovering your device too, should you ever find yourself in a similar predicament. I created this repository with the intention of assisting others in the future.
 
 ## Resources
 
