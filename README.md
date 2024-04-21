@@ -53,7 +53,7 @@ Thanks to a comment under [this post](https://www.petenetlive.com/KB/Article/000
 
 ### Table of known Lenovo LifeLine Imager downloads
 
-Feel free to add your device and firmware version to the table below using a PR.
+If I have missed anything or if you have a download link that is not listed here, please open an issue or a pull request.
 
 <div align="center">
 
@@ -140,9 +140,9 @@ I own a LenovoEMC² PX4-400R NAS, which I purchased from eBay. Unfortunately, I 
 
 ❗[PX4-300D Lenovo EMC NAS Device Stuck at 95%](https://www.petenetlive.com/KB/Article/0001381)
 
-❗[General overview support page](https://download.lenovo.com/lenovoemc/na/en/index.html)
-
 ❗[Official LenovoEMC, Lenovo, and Iomega network storage support](https://download.lenovo.com/lenovoemc/na/en/app/answers/detail/a_id/14412.html)
+
+[General overview support page](https://download.lenovo.com/lenovoemc/na/en/index.html)
 
 [Help for old Lenovo EMC NAS units, IX2, PX4 etc](https://forums.anandtech.com/threads/help-for-old-lenovo-emc-nas-units-ix2-px4-etc.2609187/)
 
