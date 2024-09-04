@@ -83,7 +83,7 @@ If I have missed anything or if you have a download link that is not listed here
 </div>
 
 
-If any of these links are broken, please let me know by opening an issue or a pull request. Also you can find the imager tool in the [Releases section](https://github.com/Pyenb/Lenovo_NAS_reflash_guide/releases) of this repository. I have reuploaded all the files there.
+If any of these links are broken, please let me know by opening an issue or a pull request. Also you can find the imager tool in the [Releases section](https://github.com/Pyenb/Lenovo_NAS_reflash_guide/releases) of this repository or on my [Storage server](https://data.pyenb.network/Github/Lenovo-NAS-Imager/). I have reuploaded all the files there.
 
 ## How to flash the firmware
 
