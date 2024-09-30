@@ -93,8 +93,10 @@ If any of these links are broken, please let me know by opening an issue or a pu
 1. Format a USB drive to FAT32. (Needs to be at least 1GB in size, maximum 32GB)
 2. Unzip the downloaded Imager file and run the executable file contained within.
 3. When prompted, select the USB drive as the destination.
-4. Reboot the NAS with the USB drive inserted (in the **top left** port on the backside of the device) **and** hold the reset button for 60 seconds.
-5. You should now see this screen:
+4. Finish the Setup.
+5. Eject the USB and insert it into your NAS (in the **top left** port on the backside of the device, acocording to a comment)
+6. Boot the NAS with the USB drive inserted **while** holding the reset button for ~60 seconds or until you see the screen below.
+7. You should now see this screen:
 
 <div align="center">
 
@@ -102,8 +104,10 @@ If any of these links are broken, please let me know by opening an issue or a pu
 
 </div>
 
-6. When finished, the device should shut down, simply power it back on.
-7. The device should now boot back up and be ready to be reconfigured.
+6. When finished, the device should shut down.
+7. Remove the USB.
+8. Turn the NAS back on.
+9. The device should now boot back up and be ready to be reconfigured.
 
 ## Additional Information
 
