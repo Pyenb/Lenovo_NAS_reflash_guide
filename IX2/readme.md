@@ -11,7 +11,7 @@ The `initrd` and `zImage` files can be found in this folder. The usb flash tool 
 
 ## Prepare your machine
 - To run the flash tool, you will need a windows host OS. I found the tool to work correctly on Windows 11.
-- For copying the disk files, you will to run the DD command. I used Debian for this.
+- For copying the disk files, you will to run the DD command.
 
 
 ## Prepare USB stick
@@ -23,6 +23,8 @@ The `initrd` and `zImage` files can be found in this folder. The usb flash tool 
 
 
 ## Prepare Hard Drive
+
+### Note: I did not need to do this. In fact, my ix2 didn't boot when I did this, but did with a clean disk. If your restore fails, try skipping this step and going to the next one with a clean disk. (diskpart clean)
 
 The tool on the USB drive expects zImage and initrd (two essential startup-related tools) to be in the first few sectors of the disk.
 
