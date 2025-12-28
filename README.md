@@ -88,15 +88,16 @@ If any of these links are broken, please let me know by opening an issue or a pu
 ## How to flash the firmware
 
 > [!CAUTION]
-> Remove your hard drives before flashing the firmware to prevent data loss! During the flashing process, all connected hard drives will be formatted!
+> Remove your hard drives before flashing the firmware to prevent data loss! During the flashing process, all connected hard drives will be formatted! (It also helps reduce boot times and gets the flashing done sooner.)
 
 1. Format a USB drive to FAT32. (Needs to be at least 1GB in size, maximum 32GB)
 2. Unzip the downloaded Imager file and run the executable file contained within.
 3. When prompted, select the USB drive as the destination.
 4. Finish the Setup.
-5. Eject the USB and insert it into your NAS (in the **top left** port on the backside of the device, acocording to a comment)
-6. Boot the NAS with the USB drive inserted **while** holding the reset button for ~60 seconds or until you see the screen below.
-7. You should now see this screen:
+5. Check the pendrive has the correct filestructure (See USB file structure below)
+6. Eject the USB and insert it into your NAS (in the **top left** port on the backside of the device, acocording to a comment). On Rackmount versions, use the front panel USB socket.
+7. Boot the NAS with the USB drive inserted **while** holding the reset button for ~60 seconds or until you see the screen below.
+8. You should now see this screen:
 
 <div align="center">
 
@@ -104,22 +105,32 @@ If any of these links are broken, please let me know by opening an issue or a pu
 
 </div>
 
-6. When finished, the device should shut down.
-7. Remove the USB.
-8. Turn the NAS back on.
-9. The device should now boot back up and be ready to be reconfigured.
+9. When finished, the device should shut down.
+10. Remove the USB.
+11. Turn the NAS back on.
+12. The device should now boot back up and be ready to be reconfigured.
+
+> [!NOTE]
+> On rackmount versions, you can plug in a screen and see the Kernel start, but you will get no confirmation whether the flashback was a success. 
+> Three possibilities: 
+> A. The pendrive is not recognized, the unit will attempt a normal boot and hang. -> Make sure the pendrive is in the correct USB socket, try another socket.
+> B. The pendrive is recognized, you will see GRUB booting the pendrive, if your drive has a LED it will flash as the copying is done, the unit will then, (without any message on VGA display) shut down. Restart the unit, if it hangs again, the pendrive used is not OK for this purpose. -> Try a different pendrive!
+> C. The pendrive is recognized, you will see GRUB booting the pendrive, if your drive has a LED it will flash as the copying is done, the unit will then, (without any message on VGA display) shut down. Restart the unit, it boots normally. -> SUCCESS
+
 
 ## Additional Information
 
 - The Lenovo LifeLine Imager is a Windows-only tool.
 - The used USB needs to be formatted as FAT32! Otherwise, the NAS won't recognize it.
+  > The Imager should format the drive to FAT32 as it's set as such in the image file, but in my case, despite making sure the drive was FAT32 to begin with, it would never correctly write the image file for whatever reason (see workaround below).
 - I had to try multiple USB drives until I found one that worked. The NAS recognized all of them and went into the recovery process, but still wouldn't boot after.
+  > This may have to do with flashdrive size, despite the partition being sized by the image. Multiple 16GB drives failed to get my PX12-450R to start up successfully. I then tried a cheap old 8GB drive, and the NAS would successfully start after the first attempt. 
 - If the Imager tool doesn't recognize the USB drive, try using rufus to reformat the USB drive. Select the drive, then the `Non-bootable` option, select `FAT32` as the file system and `MBR` as the partition scheme. Then press `Start`.
 
 ### USB file structure
 
 > [!NOTE]
-> The file under `b4b_images` is the actual firmware file. The other files are used for the boot process. If this file is missing, please try rerunning the Imager tool.
+> The file under `**b_images` is the actual firmware file (** depends on the NAS model). The other files are used for the boot process. If the image file is missing, or if the folder contains junk with abstract characters, re-running the installer will do you no good. For whatever reason the tool corrupts the image file, and it will either not write the file header, or fill the folder with various junk files. (It might work correctly under Windows 7) Read on for a workaround.
 
 The USB drive should have the following structure after running the Imager tool:
 
@@ -132,13 +143,24 @@ USB-DRIVE:.
 ├───images
 │   └───...
 └───emctools
-    └───b4b_images
+    └───**b_images
         └───VERSION_Imager.tgz
 ```
+> Workaround if you don't see the .tgz file or have junk in the folder:
+> 1. Go to ‪C:\Users\[yourusername]\AppData\Local\LifeLineImager, open folder properties, and under permissions, special permissions, change the erase, and erase subfolders and files permissions to NO.
+> 2. Run the imaging tool again, and write the pendrive once more (you might need to delete the pendrive partition manually before it will successfully write the drive again).
+> 3. The installer has now left the *.img file for the pendrive in the above folder.
+> 4. Use rufus to write the *.img file to the pendrive.
+> 5. Congrats, you have achieved what the Lenovo app couldn't, and made a correctly functioning flashback drive.
+> 6. Reverse the permissions change and delete the LifeLineImager folder.
+> 7. Continue from Step 6 of the flashing guide.
+>
 
 ## Background Information
 
 I own a LenovoEMC² PX4-400R NAS, which I purchased from eBay. Unfortunately, I bricked the device during the reset process. Fortunately, I was able to recover it using information I found online. After conducting some research, I found posts that could potentially assist **you** in recovering your device too, should you ever find yourself in a similar predicament. I created this repository with the intention of assisting others in the future.
+
+Added info based on experience with a PX12-450R. 
 
 ## Resources
 
